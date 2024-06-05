@@ -1050,7 +1050,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {level_shifter.sym} -660 600 0 0 {name=x1}
+C {rc_osc_level_shifter.sym} -660 600 0 0 {name=x1}
 C {devices/lab_wire.sym} -420 580 0 0 {name=p63 sig_type=std_logic lab=ena_h}
 C {devices/lab_wire.sym} -420 620 0 0 {name=p64 sig_type=std_logic lab=enb_h}
 C {devices/lab_wire.sym} -570 740 0 0 {name=p65 sig_type=std_logic lab=avss}

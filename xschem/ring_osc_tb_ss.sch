@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-11
-x2=2e-05
+x1=9.49446e-06
+x2=1.04192e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,15 +36,16 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-11
-x2=2e-05
+x1=9.49446e-06
+x2=1.04192e-05
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node="dout
-x1.out0"
-color="7 4"
+x1.out0
+ena"
+color="7 4 8"
 dataset=-1
 unitx=1
 logx=0
@@ -83,16 +84,17 @@ N -430 -100 -430 -60 {
 lab=ena}
 C {sky130_ef_ip__rc_osc_500k.sym} -30 0 0 0 {name=x1}
 C {devices/gnd.sym} 140 80 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -300 -30 0 0 {name=V1 value=3.3 savecurrent=false}
-C {devices/vsource.sym} -380 -30 0 0 {name=V2 value=1.8 savecurrent=false}
-C {devices/code.sym} -700 -220 0 0 {name=TT_CORNER only_toplevel=false value="
-.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+C {devices/vsource.sym} -300 -30 0 0 {name=V1 value=2.97 savecurrent=false}
+C {devices/vsource.sym} -380 -30 0 0 {name=V2 value=1.62 savecurrent=false}
+C {devices/code.sym} -700 -220 0 0 {name=SS_CORNER only_toplevel=false value="
+.option TEMP=100
+.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice ss
 "}
 C {devices/code_shown.sym} -700 40 0 0 {name=control only_toplevel=false value="
 .control
 save all
 tran 1n 20u uic
-write ring_osc_tb.raw all
+write ring_osc_tb_ss.raw all
 .endc
 "}
 C {devices/lab_wire.sym} -300 -150 0 0 {name=p3 sig_type=std_logic lab=vdd1v8}
@@ -103,12 +105,5 @@ m=1
 value=1.5p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} -430 -30 0 1 {name=V3 value="PWL(0 0 10u 0 10.01u 1.8 100u 1.8 100.01u 0 200u 0 200.01u 1.8)" savecurrent=false}
+C {devices/vsource.sym} -430 -30 0 1 {name=V3 value="PWL(0 0 10u 0 10.01u 1.62 100u 1.62 100.01u 0 200u 0 200.01u 1.62)" savecurrent=false}
 C {devices/lab_wire.sym} -430 -100 0 1 {name=p6 sig_type=std_logic lab=ena}
-C {devices/launcher.sym} 620 450 0 0 {name=h1
-descr="Select arrow and 
-Ctrl-Left-Click to load/unload waveforms
-after running simulation" 
-tclcommand="
-xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
-"}

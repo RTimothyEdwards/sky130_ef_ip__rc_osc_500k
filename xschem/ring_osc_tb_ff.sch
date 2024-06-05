@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 300 -30 1100 370 {flags=graph
-y1=-2e-06
-y2=2e-06
+y1=-2.8e-06
+y2=1.2e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-11
-x2=2e-05
+x1=-6.61268e-07
+x2=2.01146e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -29,15 +29,15 @@ logx=0
 logy=0
 }
 B 2 310 -500 1110 -100 {flags=graph
-y1=-0.045
-y2=3.4
+y1=-0.02
+y2=3.7
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-11
-x2=2e-05
+x1=-6.61268e-07
+x2=2.01146e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -50,6 +50,7 @@ unitx=1
 logx=0
 logy=0
 }
+T {Simulation at fast/high/cold} -650 -400 0 0 0.8 0.8 {}
 N -60 80 -0 80 { lab=GND}
 N -0 80 140 80 { lab=GND}
 N -240 80 -60 80 { lab=GND}
@@ -83,16 +84,17 @@ N -430 -100 -430 -60 {
 lab=ena}
 C {sky130_ef_ip__rc_osc_500k.sym} -30 0 0 0 {name=x1}
 C {devices/gnd.sym} 140 80 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -300 -30 0 0 {name=V1 value=3.3 savecurrent=false}
-C {devices/vsource.sym} -380 -30 0 0 {name=V2 value=1.8 savecurrent=false}
-C {devices/code.sym} -700 -220 0 0 {name=TT_CORNER only_toplevel=false value="
-.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+C {devices/vsource.sym} -300 -30 0 0 {name=V1 value=3.63 savecurrent=false}
+C {devices/vsource.sym} -380 -30 0 0 {name=V2 value=1.98 savecurrent=false}
+C {devices/code.sym} -700 -220 0 0 {name=FF_CORNER only_toplevel=false value="
+.option TEMP=-40
+.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice ff
 "}
 C {devices/code_shown.sym} -700 40 0 0 {name=control only_toplevel=false value="
 .control
 save all
 tran 1n 20u uic
-write ring_osc_tb.raw all
+write ring_osc_tb_ff.raw all
 .endc
 "}
 C {devices/lab_wire.sym} -300 -150 0 0 {name=p3 sig_type=std_logic lab=vdd1v8}
@@ -103,12 +105,5 @@ m=1
 value=1.5p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} -430 -30 0 1 {name=V3 value="PWL(0 0 10u 0 10.01u 1.8 100u 1.8 100.01u 0 200u 0 200.01u 1.8)" savecurrent=false}
+C {devices/vsource.sym} -430 -30 0 1 {name=V3 value="PWL(0 0 10u 0 10.01u 1.98 100u 1.98 100.01u 0 200u 0 200.01u 1.98)" savecurrent=false}
 C {devices/lab_wire.sym} -430 -100 0 1 {name=p6 sig_type=std_logic lab=ena}
-C {devices/launcher.sym} 620 450 0 0 {name=h1
-descr="Select arrow and 
-Ctrl-Left-Click to load/unload waveforms
-after running simulation" 
-tclcommand="
-xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
-"}
