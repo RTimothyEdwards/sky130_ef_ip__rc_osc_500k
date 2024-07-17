@@ -1,4 +1,4 @@
-v {xschem version=3.4.4 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -11,6 +11,9 @@ T {Current-starved ring oscillator 500kHz} -200 -390 0 0 0.65 0.65 {}
 T {Current biasing} -500 210 0 0 0.4 0.4 {}
 T {10nA} -500 240 0 0 0.4 0.4 {}
 T {sky130_ef_ip__rc_osc_500k} -130 -460 0 0 0.7 0.7 {}
+T {Note:  Resistor in layout consists of 136 segments of 11um each.
+Resistor is trimmed by shorting across some number of segments.
+Parsitic extraction shows a need to short over 22 of the segments.} -460 -280 0 0 0.4 0.4 {}
 N -110 -20 -110 30 {
 lab=#net1}
 N -190 -50 -150 -50 {
@@ -245,8 +248,6 @@ N -510 80 -510 110 {
 lab=nbias}
 N -590 -120 -530 -120 {
 lab=avss}
-N -510 -90 -510 20 {
-lab=#net12}
 N -450 140 -400 140 {
 lab=nbias}
 N -210 140 -150 140 {
@@ -308,15 +309,15 @@ lab=pbias}
 N 830 640 890 640 {
 lab=ena}
 N -360 100 -360 110 {
-lab=#net13}
+lab=#net12}
 N -360 100 -310 100 {
-lab=#net13}
+lab=#net12}
 N -310 90 -310 100 {
-lab=#net13}
+lab=#net12}
 N -310 20 -310 30 {
 lab=pbias}
 N -310 80 -310 90 {
-lab=#net13}
+lab=#net12}
 N -310 50 -240 50 {
 lab=avss}
 N -240 50 -240 180 {
@@ -368,7 +369,7 @@ lab=avdd}
 N 970 180 1030 180 {
 lab=avss}
 N 970 -20 970 20 {
-lab=#net14}
+lab=#net13}
 N 900 -50 900 50 {
 lab=#net3}
 N 970 50 1040 50 {
@@ -386,13 +387,13 @@ lab=avdd}
 N 1300 180 1360 180 {
 lab=avss}
 N 1300 -20 1300 20 {
-lab=#net15}
+lab=#net14}
 N 1210 -50 1260 -50 {
-lab=#net14}
+lab=#net13}
 N 1190 -50 1190 50 {
-lab=#net14}
+lab=#net13}
 N 1210 50 1260 50 {
-lab=#net14}
+lab=#net13}
 N 1300 50 1370 50 {
 lab=avss}
 N 1370 50 1370 110 {
@@ -422,23 +423,23 @@ lab=avss}
 N 1040 50 1040 180 {
 lab=avss}
 N 1190 -50 1210 -50 {
-lab=#net14}
+lab=#net13}
 N 1190 50 1210 50 {
-lab=#net14}
+lab=#net13}
 N 970 0 1120 0 {
-lab=#net14}
+lab=#net13}
 N 900 -50 930 -50 {
 lab=#net3}
 N 900 50 930 50 {
 lab=#net3}
 N 1300 80 1300 100 {
-lab=#net16}
+lab=#net15}
 N 1300 130 1370 130 {
 lab=avss}
 N 1300 160 1300 180 {
 lab=avss}
 N 1300 -100 1300 -80 {
-lab=#net17}
+lab=#net16}
 N 1300 -170 1300 -160 {
 lab=avdd}
 N 1300 -130 1400 -130 {
@@ -448,11 +449,11 @@ lab=avdd}
 N 970 -170 970 -160 {
 lab=avdd}
 N 970 -100 970 -80 {
-lab=#net18}
+lab=#net17}
 N 970 160 970 180 {
 lab=avss}
 N 970 80 970 100 {
-lab=#net19}
+lab=#net18}
 N 970 130 1040 130 {
 lab=avss}
 N 850 -130 930 -130 {
@@ -470,7 +471,7 @@ lab=avdd}
 N 690 180 970 180 {
 lab=avss}
 N 1300 0 1500 0 {
-lab=#net15}
+lab=#net14}
 N 420 540 420 730 {
 lab=out0}
 N 420 540 510 540 {
@@ -486,9 +487,9 @@ lab=avdd}
 N 1660 180 1720 180 {
 lab=avss}
 N 1660 -20 1660 20 {
-lab=#net20}
+lab=#net19}
 N 1590 -50 1590 50 {
-lab=#net15}
+lab=#net14}
 N 1660 50 1730 50 {
 lab=avss}
 N 1720 180 1750 180 {
@@ -506,11 +507,11 @@ lab=avss}
 N 1920 -20 1920 20 {
 lab=out0}
 N 1830 -50 1880 -50 {
-lab=#net20}
+lab=#net19}
 N 1810 -50 1810 50 {
-lab=#net20}
+lab=#net19}
 N 1830 50 1880 50 {
-lab=#net20}
+lab=#net19}
 N 1920 50 1990 50 {
 lab=avss}
 N 1990 50 1990 110 {
@@ -540,23 +541,23 @@ lab=avss}
 N 1730 50 1730 180 {
 lab=avss}
 N 1810 -50 1830 -50 {
-lab=#net20}
+lab=#net19}
 N 1810 50 1830 50 {
-lab=#net20}
+lab=#net19}
 N 1660 0 1810 0 {
-lab=#net20}
+lab=#net19}
 N 1590 -50 1620 -50 {
-lab=#net15}
+lab=#net14}
 N 1590 50 1620 50 {
-lab=#net15}
+lab=#net14}
 N 1920 80 1920 100 {
-lab=#net21}
+lab=#net20}
 N 1920 130 1990 130 {
 lab=avss}
 N 1920 160 1920 180 {
 lab=avss}
 N 1920 -100 1920 -80 {
-lab=#net22}
+lab=#net21}
 N 1920 -170 1920 -160 {
 lab=avdd}
 N 1920 -130 2020 -130 {
@@ -566,11 +567,11 @@ lab=avdd}
 N 1660 -170 1660 -160 {
 lab=avdd}
 N 1660 -100 1660 -80 {
-lab=#net23}
+lab=#net22}
 N 1660 160 1660 180 {
 lab=avss}
 N 1660 80 1660 100 {
-lab=#net24}
+lab=#net23}
 N 1660 130 1730 130 {
 lab=avss}
 N 1540 -130 1620 -130 {
@@ -600,9 +601,9 @@ lab=avdd}
 N 1570 180 1660 180 {
 lab=avss}
 N 1500 0 1590 0 {
-lab=#net15}
+lab=#net14}
 N 1480 0 1480 40 {
-lab=#net15}
+lab=#net14}
 N 1480 100 1480 180 {
 lab=avss}
 N 510 -170 620 -170 {
@@ -616,9 +617,9 @@ lab=avss}
 N 1230 -170 1300 -170 {
 lab=avdd}
 N 1120 -0 1180 -0 {
-lab=#net14}
+lab=#net13}
 N 1180 -0 1190 -0 {
-lab=#net14}
+lab=#net13}
 N 610 180 620 180 {
 lab=avss}
 N 410 10 410 40 {
@@ -628,11 +629,11 @@ lab=avss}
 N 410 0 410 10 {
 lab=#net2}
 N 1130 10 1130 40 {
-lab=#net14}
+lab=#net13}
 N 1130 100 1130 180 {
 lab=avss}
 N 1130 0 1130 10 {
-lab=#net14}
+lab=#net13}
 N 150 440 150 500 {
 lab=dvdd}
 N 150 440 280 440 {
@@ -663,6 +664,20 @@ N 250 710 250 790 {
 lab=dvss}
 N 230 790 260 790 {
 lab=dvss}
+N -680 -240 -620 -240 {
+lab=avss}
+N -600 -300 -600 -270 {
+lab=avdd}
+N -700 -300 -600 -300 {
+lab=avdd}
+N -700 -300 -700 -210 {
+lab=avdd}
+N -700 -210 -600 -210 {
+lab=avdd}
+N -510 -90 -510 20 {
+lab=#net24}
+N -600 -210 -600 -170 {
+lab=avdd}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} -130 60 0 0 {name=M1
 L=0.5
 W=0.42
@@ -964,7 +979,7 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} -510 -120 0 0 {name=R1
-L=1500
+L=1254
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
@@ -1348,3 +1363,9 @@ C {devices/lab_wire.sym} 720 590 0 0 {name=p34 sig_type=std_logic lab=dout0}
 C {devices/lab_wire.sym} 230 630 0 0 {name=p35 sig_type=std_logic lab=dout}
 C {devices/lab_wire.sym} 70 710 0 1 {name=p36 sig_type=std_logic lab=enb}
 C {devices/lab_pin.sym} 260 790 0 1 {name=p44 sig_type=std_logic lab=dvss}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} -600 -240 0 0 {name=R2[21:0]
+L=11
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {devices/lab_wire.sym} -680 -240 0 1 {name=p45 sig_type=std_logic lab=avss}

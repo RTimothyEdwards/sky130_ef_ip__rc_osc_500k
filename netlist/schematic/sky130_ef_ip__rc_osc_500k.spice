@@ -1,0 +1,94 @@
+** sch_path: /home/tim/gits/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sch
+.subckt sky130_ef_ip__rc_osc_500k ena dvdd avdd dvss avss dout
+*.PININFO avdd:B avss:B dvss:B dvdd:B ena:I dout:O
+XM1 net1 out0 net10 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM2 net1 out0 net9 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM3 net2 net1 net8 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM4 net2 net1 net11 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM5 net5 dout0 dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM6 dout dout0 dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM9 net3 net2 net7 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM10 net3 net2 net6 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM11 dout0 out0 dvdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM12 net4 out0 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM13 dout0 ena net4 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM14 dout ena net5 dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM24 net9 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM25 net8 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM26 net7 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM27 net6 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM28 net11 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM29 net10 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM21 nbias nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM22 pbias pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XR1 net24 avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=1254 mult=1 m=1
+XM23 net24 ena_h nbias avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM30 net12 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM33 nbias enb_h avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM34 pbias ena_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM36 pbias ena_h net12 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+x1 dvdd ena_h avdd enb_h ena dvss avss enb rc_osc_level_shifter
+XD3 dvss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=4e6
+XM7 net13 net3 net17 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM8 net13 net3 net18 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM15 net14 net13 net16 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 net14 net13 net15 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 net17 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 net16 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net15 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net18 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM31 net19 net14 net22 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM32 net19 net14 net23 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM37 out0 net19 net21 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM38 out0 net19 net20 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM39 net22 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM40 net21 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM41 net20 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM42 net23 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XC1 net1 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC2 net3 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC3 net14 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC4 net2 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC5 net13 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XM43 dout0 ena dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM35 dout enb dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XR2[21] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[20] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[19] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[18] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[17] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[16] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[15] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[14] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[13] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[12] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[11] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[10] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[9] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[8] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[7] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[6] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[5] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[4] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[3] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[2] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[1] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[0] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+.ends
+
+* expanding   symbol:  rc_osc_level_shifter.sym # of pins=8
+** sym_path: /home/tim/gits/sky130_ef_ip__rc_osc_500k/xschem/rc_osc_level_shifter.sym
+** sch_path: /home/tim/gits/sky130_ef_ip__rc_osc_500k/xschem/rc_osc_level_shifter.sch
+.subckt rc_osc_level_shifter dvdd out_h avdd outb_h in_l dvss avss inb_l
+*.PININFO in_l:I dvdd:B avdd:B dvss:B avss:B out_h:O outb_h:O inb_l:O
+XM7 inb_l in_l dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM8 inb_l in_l dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM15 out_h outb_h net1 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 outb_h out_h net2 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 outb_h in_l avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 out_h inb_l avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net1 out_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net2 outb_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+.ends
+
+.end

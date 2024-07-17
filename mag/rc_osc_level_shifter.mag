@@ -233,15 +233,15 @@ rect 2064 -1488 2162 -1478
 rect 34 -1548 2064 -1494
 rect -64 -1564 34 -1554
 rect 2064 -1564 2162 -1554
-use sky130_fd_pr__pfet_01v8_LGS3BL  XM7
+use sky130_fd_pr__pfet_01v8_LGS3BL  XM7 paramcells
 timestamp 1699295625
 transform 1 0 -153 0 1 -932
 box -211 -284 211 284
-use sky130_fd_pr__nfet_01v8_64Z3AY  XM8
+use sky130_fd_pr__nfet_01v8_64Z3AY  XM8 paramcells
 timestamp 1699295625
 transform 1 0 -153 0 1 -1503
 box -211 -279 211 279
-use sky130_fd_pr__pfet_g5v0d10v5_6ELFTH  XM15
+use sky130_fd_pr__pfet_g5v0d10v5_6ELFTH  XM15 paramcells
 timestamp 1699295625
 transform 1 0 1500 0 1 -1155
 box -308 -339 308 339
@@ -249,7 +249,7 @@ use sky130_fd_pr__pfet_g5v0d10v5_6ELFTH  XM16
 timestamp 1699295625
 transform 1 0 1494 0 1 -487
 box -308 -339 308 339
-use sky130_fd_pr__nfet_g5v0d10v5_6XHUDR  XM17
+use sky130_fd_pr__nfet_g5v0d10v5_6XHUDR  XM17 paramcells
 timestamp 1699295625
 transform 1 0 1502 0 1 -1858
 box -278 -300 278 300

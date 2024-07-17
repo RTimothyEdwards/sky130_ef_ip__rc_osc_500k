@@ -1,6 +1,9 @@
 #!/bin/bash
 
+project=sky130_ef_ip__rc_osc_500k
+
 echo ${PDK_ROOT:=/usr/share/pdk} > /dev/null
 echo ${PDK:=sky130A} > /dev/null
 
-netgen -batch lvs "../netlist/lvs/sky130_ef_ip__rc_osc_500k.spice sky130_ef_ip__rc_osc_500k" "../netlist/schem/sky130_ef_ip__rc_osc_500k.spice sky130_ef_ip__rc_osc_500k" ${PDK_ROOT}/${PDK}/libs.tech/netgen/${PDK}_setup.tcl rc_osc_500k_comp.out | tee netgen.log
+netgen -batch lvs "../netlist/layout/${project}.spice $project" "../netlist/schematic/${project}.spice ${project}" \
+	${PDK_ROOT}/${PDK}/libs.tech/netgen/${PDK}_setup.tcl ${project}_comp.out | tee netgen.log
