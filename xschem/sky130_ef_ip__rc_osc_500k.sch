@@ -1077,7 +1077,7 @@ C {devices/lab_pin.sym} 500 820 0 0 {name=p22 sig_type=std_logic lab=avss}
 C {sky130_fd_pr/diode.sym} -840 720 0 0 {name=D3
 model=diode_pw2nd_05v5
 area=2.025e11
-pj=1.8e6
+perim=1.8e6
 }
 C {devices/lab_wire.sym} -780 800 0 0 {name=p48 sig_type=std_logic lab=dvss}
 C {devices/lab_pin.sym} 400 730 0 0 {name=p1 sig_type=std_logic lab=out0}
